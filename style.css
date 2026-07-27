@@ -9,8 +9,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background-color: #f6f0ff;
     padding: 20px 0;
-    background-color: #ffffff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -88,10 +89,143 @@ nav {
     display: none;
 } 
 
-@media (max-width: 1180px){
+/* Hero Section */
+.hero {
+    background: #f6f0ff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 50px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 86%;
+}
+
+.hero-text {
+    flex: 1;
+}
+.hero-text h1 {
+    font-size: clamp(37px, 7vw, 70px);
+    margin-bottom: 12px;
+}
+
+.learn {
+    color: #5B21B6;
+}
+
+.grow {
+    color: #ef4444;
+}
+
+.succeed {
+    color: #fbbf24;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin-bottom: 12px;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.first-hero-btn {
+    text-decoration: none;
+    color: white;
+    background: #5B21B6;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.second-hero-btn {
+    text-decoration: none;
+    color: #5B21B6;
+    background: white;
+    padding: 9px 15px;
+    border: 1px solid #5B21B6;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.hero-image-div {
+    width: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.hero-image-div img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-profile-container {
+    display: flex;
+    width: 150px;
+    align-items: center;
+}
+
+.hero-profile-stat {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.hero-profile-stat img {
+    object-position: center;
+    object-fit: contain;
+    width: 100%;
+}
+
+.hero-stat-text {
+    display: flex;
+}
+
+.hero-stat-text p {
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 1212px){
     .nav-community-btn{
         display: none;
     }
+
+    .hero {
+        padding-top: 49px;
+    }
+
+    .hero-container {
+        flex-wrap: wrap;
+    }
+
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1, .hero-description {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 880px){
@@ -119,7 +253,7 @@ nav {
         justify-content: center;
         gap: 10px;
         background: linear-gradient(135deg, #8a54e2d3, #b58df5a1);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(10px);
         transition: left 0.5s ease;
     }
 
@@ -134,6 +268,17 @@ nav {
 
     .nav-links:hover::after {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .hero-container {
+        width: 90%;
+    }
+
+    .hero-btn {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
