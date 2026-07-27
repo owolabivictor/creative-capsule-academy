@@ -40,6 +40,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 45%;
+    min-width: 450px;
 }
 
 .nav-links {
@@ -81,5 +82,55 @@ nav {
 
 .nav-community-btn a:hover {
     background: #491699;
+}
+
+.fa-solid.fa-bars, .fa-solid.fa-xmark {
+    display: none;
+} 
+
+@media (max-width: 1180px){
+    .nav-community-btn{
+        display: none;
+    }
+}
+
+@media (max-width: 880px){
+    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+        display: block;
+        cursor: pointer;
+    }
+
+    .fa-solid.fa-xmark {
+        color: #000000;
+        font-size: 25px;
+    }
+
+    .nav-lists {
+        position: fixed;
+        flex-direction: column;
+        inset: 0;
+        min-width: none;
+        width: 100vw;
+        justify-content: space-evenly;
+        padding: 50px;
+        background: linear-gradient(135deg, #8a54e2d3, #b58df5a1);
+        backdrop-filter: blur(2px);
+        display: none;
+    }
+
+    .nav-links {
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links::after {
+        background: #3a3a3a;
+    }
+
+    .nav-links:hover::after {
+        width: 0;
+    }
 }
 
