@@ -9,7 +9,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 70px;
+    padding: 20px 0;
     background-color: #ffffff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -17,7 +17,7 @@ nav {
 .nav-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 86%;
     align-items: center;
     gap: 5%;
 }
@@ -84,7 +84,7 @@ nav {
     background: #491699;
 }
 
-.fa-solid.fa-bars, .fa-solid.fa-xmark {
+.fa-solid.fa-bars, .fa-solid.fa-arrow-right-from-bracket {
     display: none;
 } 
 
@@ -95,34 +95,37 @@ nav {
 }
 
 @media (max-width: 880px){
-    .fa-solid.fa-bars, .fa-solid.fa-xmark {
+    .fa-solid.fa-bars, .fa-solid.fa-arrow-right-from-bracket {
         display: block;
         cursor: pointer;
     }
 
-    .fa-solid.fa-xmark {
+    .fa-solid.fa-arrow-right-from-bracket {
         color: #000000;
-        font-size: 25px;
+        font-size: 20px;
+        transition: color 0.15s;
+    }
+
+    .fa-solid.fa-arrow-right-from-bracket:hover {
+        color: #df3b3b;
     }
 
     .nav-lists {
         position: fixed;
-        flex-direction: column;
         inset: 0;
-        min-width: none;
-        width: 100vw;
-        justify-content: space-evenly;
-        padding: 50px;
+        left: -100%;
+        flex-direction: column;
+        min-width: 100%;
+        justify-content: center;
+        gap: 10px;
         background: linear-gradient(135deg, #8a54e2d3, #b58df5a1);
         backdrop-filter: blur(2px);
-        display: none;
+        transition: left 0.5s ease;
     }
 
     .nav-links {
         color: white;
-        width: 100%;
-        text-align: center;
-        padding: 20px;
+        padding: 15px 0 ;
     }
 
     .nav-links::after {
@@ -130,7 +133,7 @@ nav {
     }
 
     .nav-links:hover::after {
-        width: 0;
+        width: 100%;
     }
 }
 
